@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawler 3009</title>
+
+    <!-- Implementation to build:
+        1. create html & css files -> create a form to ask the user what website they want to crawl
+        2. show the results of the crawl in a table
+        3. add a button to download the results as a csv file 
+
+
+    -->
+
+    
+    
+</head>
+<body>
+
+
+    <h1>Friendly crawler</h1>
+    <br>
+    <p>The crawler will crawl the website you pick and it will show you a table with all the links that bring to the website itself and it will count them.</p>
+    <br>
+    <p>You will get a table showing the result and you can download it.</p>
+
+    <form action="/crawl" method="POST" >
+        <input type="text" placeholder="example.com" name="inputfield">
+        <button id="submit">Submit</button>
+    </form>
+
+    <br><br><br><br>
+
+    <table>
+	
+        <thead>
+          <tr>
+            <th>&nbsp;</th>
+            <th>Link</th>
+            <th>Times</th>
+            
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>CompanyA</td>
+            <td>5</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>CompanyB</td>
+            <td>2</td>
+            <td>0</td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <br><br><br><br>
+
+
+    <p>check out this video to manage GET/POST request  <a href="https://netninja.dev/courses/node-js-crash-course/lectures/31323961">here</a></p>
+
+    <button>Download SVG</button>
+    <button>Download Excel</button>
+
+    <script>
+
+
+        // document.getElementById('submit').addEventListener('click', function(event) {
+        //     event.preventDefault(); // Prevent the form from being submitted normally
+
+        //     const baseUrl = 2+2;
+
+        //     fetch('/crawl', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify({ baseUrl })
+        //     })
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok');
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         console.log(data);
+        //         // Generate your table here
+        //     });
+        // });
+
+
+
+// ORIGINAL CODE
+
+        // document.getElementById('submit').addEventListener('click', function(event) {
+        //     event.preventDefault(); // Prevent the form from being submitted normally
+
+        //     const baseUrl = 'https://' + document.querySelector('input').value;
+
+        //     fetch('/crawl', {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json'
+        //         },
+        //         body: JSON.stringify({ baseUrl })
+        //     })
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok');
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         console.log(data);
+        //         // Generate your table here
+        //     });
+        // });
+
+    
+        </script>
+
+    
+
+    
+
+
+</body>
+</html>
